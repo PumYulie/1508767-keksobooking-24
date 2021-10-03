@@ -1,13 +1,11 @@
 function randomInteger(min, max) {
   // источник learn.javascript.ru/task/random-int-min-max
   if (min < 0 || max < 0) {
-    alert('введите плз 2 разных целых положительных числа, 0 тоже подходит');
-    return;
+    throw('впиши плз 2 разных целых положительных числа, 0 тоже подходит');
   }
 
   if(min >= max) {
-    alert('введите плз 2 разных целых положительных числа, 0 тоже подходит');
-    return;
+    throw('впиши плз 2 разных целых положительных числа, 0 тоже подходит');
   }
 
   const rand = min + Math.random() * (max + 1 - min);
@@ -16,17 +14,14 @@ function randomInteger(min, max) {
 
 function randomIntegerWithDot(min, max, integersAfterDot) {
   if (min < 0 || max < 0) {
-    alert('впиши плз 2 разных положительных числа, можно нецелых, 0 тоже подходит');
-    return;
+    throw('впиши плз 2 разных положительных числа, можно нецелых, 0 тоже подходит');
   }
 
   if(min >= max) {
-    alert('впиши плз 2 разных положительных числа, можно нецелых, 0 тоже подходит');
-    return;
+    throw('впиши плз 2 разных положительных числа, можно нецелых, 0 тоже подходит');
   }
 
   integersAfterDot = Math.round(integersAfterDot);
-  
   const num = min + Math.random() * (max - min);
   return +num.toFixed(integersAfterDot);
 }
