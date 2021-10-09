@@ -1,18 +1,9 @@
+import {TYPEOFESTATE, CHECKINS, CHECKOUTS, FEATURES, PHOTOS} from './mock.js';
 import {getRandomPositiveInteger} from './utils/get-random-positive-integer.js';
 import {getRandomPositiveFloat} from './utils/get-random-positive-float.js';
 import {getTwoDigitsFrom01To10} from './utils/get-two-digits-from-01-to-10.js';
 import {getRandomArrayElement } from './utils/get-random-array-element.js';
 import {createArrayFromRandomElements} from './utils/create-array-from-random-elements.js';
-
-const TYPEOFESTATE = ['palace', 'flat', 'house', 'bungalow', 'hotel'];
-const CHECKINS = ['12:00', '13:00', '14:00'];
-const CHECKOUTS = ['12:00', '13:00', '14:00'];
-const FEATURES = ['wifi', 'dishwasher', 'parking', 'washer', 'elevator', 'conditioner'];
-const PHOTOS = [
-  'https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/duonguyen-8LrGtIxxa4w.jpg',
-  'https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/brandon-hoogenboom-SNxQGWxZQi0.jpg',
-  'https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/claire-rendall-b6kAwr1i0Iw.jpg',
-];
 
 const generatePlaceObject = () => {
 
