@@ -35,7 +35,7 @@ const generateFatObject = () => {
   };
 
   const LATITUDE = getRandomPositiveFloat(35.65000, 35.70000, 5);
-  const LONGITUDE = getRandomPositiveFloat(139.70000, 139.80000, 5)
+  const LONGITUDE = getRandomPositiveFloat(139.70000, 139.80000, 5);
 
   return {
     author: {
@@ -62,3 +62,5 @@ const generateFatObject = () => {
 };
 
 const ArrayOfGeneratedObjects = Array.from({length: 10}, generateFatObject);
+
+ArrayOfGeneratedObjects();
