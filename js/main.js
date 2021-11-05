@@ -1,5 +1,3 @@
-import {generatePlaceObject} from './generate-place-object.js';
+import {popupArticlesGenerated} from './generate-similar-elems.js';
 
-const ArrayOfGeneratedObjects = Array.from({length: 10}, generatePlaceObject);
-
-ArrayOfGeneratedObjects();
+popupArticlesGenerated();
