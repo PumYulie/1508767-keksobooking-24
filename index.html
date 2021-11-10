@@ -89,7 +89,7 @@
 
         <fieldset class="ad-form__element ad-form__element--wide">
           <label class="ad-form__label" for="title">Заголовок объявления</label>
-          <input id="title" name="title" type="text" placeholder="Милая, уютная квартирка в центре Токио" required minlength="3" maxlength="100">
+          <input id="title" name="title" type="text" placeholder="Милая, уютная квартирка в центре Токио" required minlength="30" maxlength="100">
         </fieldset>
 
         <fieldset class="ad-form__element ad-form__element--wide">
@@ -126,7 +126,7 @@
             <option value="14:00">Выезд до 14</option>
           </select>
         </fieldset>
-<!-- КОМНАТЫ -->
+
         <fieldset class="ad-form__element">
           <label class="ad-form__label" for="room_number">Количество комнат</label>
           <select id="room_number" name="rooms" required>
@@ -136,7 +136,7 @@
             <option value="100">100 комнат</option>
           </select>
         </fieldset>
-<!-- ГОСТИ -->
+
         <fieldset class="ad-form__element">
           <label class="ad-form__label" for="capacity">Количество мест</label>
           <select id="capacity" name="capacity" required>
@@ -172,7 +172,7 @@
           <label class="ad-form__label">Фотография жилья</label>
           <div class="ad-form__photo-container">
             <div class="ad-form__upload">
-              <input type="file" id="images" name="images" class="ad-form__input visually-hidden" required>
+              <input type="file" id="images" name="images" class="ad-form__input visually-hidden" accept="image/png, image/jpeg" required>
               <label for="images" class="ad-form__drop-zone">Загрузить<br>фото...</label>
             </div>
             <div class="ad-form__photo"></div>
@@ -243,6 +243,6 @@
   </template>
 
   <script type="module" src="./js/main.js"></script>
-  <!-- <script type="module" src="./js/form.js"></script> -->
+
 </body>
 </html>
