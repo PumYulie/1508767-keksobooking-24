@@ -4,7 +4,6 @@ const formRoomNumber = document.querySelector('#room_number');
 const formGuestNumber = document.querySelector('#capacity');
 const guestNumberOptions = formGuestNumber.querySelectorAll('option');
 const notForGuests = formGuestNumber.querySelector('option[value="0"]');
-
 const saveFormButton = document.querySelector('.ad-form__submit');
 const formAdTitle = document.querySelector('#title');
 const formPriceInput = document.querySelector('#price');
@@ -70,7 +69,6 @@ const onformPriceInput = (element) => {
   element.reportValidity();
 };
 
-// когда и как удалять этот слушатель, чтобы обработчики не копились? надо ли вообще?
 formAdTitle.addEventListener('input', () => {
   onFormAdTitleInput(formAdTitle);
 });
@@ -84,12 +82,10 @@ formPriceInput.addEventListener('input', () => {
   onformPriceInput(formPriceInput);
 });
 
-// когда и как удалять этот слушатель, чтобы обработчики не копились? надо ли вообще?
 formRoomNumber.addEventListener('input', (evt) => {
   onRoomNumberChange(evt);
 });
 
-// я прикинула, что если поставлю сюда {once: true} - то у меня тогда обработчик только 1 раз на кнопке сработает, а если с первого раза не исправят ошибки в полях - то затем обработчика на кнопке ведь уже не будет?, чтобы заблочить отправку невалидных данных
 saveFormButton.addEventListener('click', () => {
   onSaveFormButtonClick(saveFormButton);
 });
