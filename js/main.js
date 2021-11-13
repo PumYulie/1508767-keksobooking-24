@@ -1,12 +1,9 @@
-import {popupArticlesGenerated} from './generate-similar-elems.js';
-import {formRoomNumber, saveFormButton, formAdTitle, formPriceInput, formCoordinates} from './form-validation.js';
-import {makePageInactive, makePegaActive} from './page-activation.js';
+import {formRoomNumber, saveFormButton, formAdTitle, formPriceInput} from './form-validation.js';
+import {map, formCoordinatesInput} from './map.js';
 
-makePageInactive();
-popupArticlesGenerated;
 formRoomNumber;
 saveFormButton;
 formAdTitle;
 formPriceInput;
-formCoordinates;
-makePegaActive;
+formCoordinatesInput;
+map;

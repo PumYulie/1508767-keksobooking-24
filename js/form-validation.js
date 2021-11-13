@@ -1,13 +1,15 @@
 import {deselectAndHideOption} from './utils/deselect-and-hide-option.js';
+import {formCoordinatesInput, onResetButtonClick} from './map.js';
 
 const formRoomNumber = document.querySelector('#room_number');
 const formGuestNumber = document.querySelector('#capacity');
 const guestNumberOptions = formGuestNumber.querySelectorAll('option');
 const notForGuests = formGuestNumber.querySelector('option[value="0"]');
-const saveFormButton = document.querySelector('.ad-form__submit');
 const formAdTitle = document.querySelector('#title');
 const formPriceInput = document.querySelector('#price');
-const formCoordinates = document.querySelector('#address');
+
+const saveFormButton = document.querySelector('.ad-form__submit');
+const resetFormButton = document.querySelector('.ad-form__reset');
 
 const onRoomNumberChange = (evt) => {
 
@@ -58,7 +60,7 @@ const onFormAdTitleInput = (element) => {
   element.reportValidity();
 };
 
-const onformPriceInput = (element) => {
+const onFormPriceInput = (element) => {
   if (element.validity.valueMissing) {
     element.setCustomValidity('Это обязательное поле');
   } else if (element.validity.rangeOverFlow) {
@@ -73,13 +75,8 @@ formAdTitle.addEventListener('input', () => {
   onFormAdTitleInput(formAdTitle);
 });
 
-formCoordinates.addEventListener('focus', () => {
-  formAdTitle.reportValidity();
-  onFormAdTitleInput(formAdTitle);
-});
-
 formPriceInput.addEventListener('input', () => {
-  onformPriceInput(formPriceInput);
+  onFormPriceInput(formPriceInput);
 });
 
 formRoomNumber.addEventListener('input', (evt) => {
@@ -90,4 +87,8 @@ saveFormButton.addEventListener('click', () => {
   onSaveFormButtonClick(saveFormButton);
 });
 
-export {formRoomNumber, saveFormButton, formAdTitle, formPriceInput, formCoordinates};
+resetFormButton.addEventListener('click', () => {
+  onResetButtonClick();
+});
+
+export {formRoomNumber, saveFormButton, formAdTitle, formPriceInput, formCoordinatesInput};

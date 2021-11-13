@@ -3,7 +3,7 @@ import {disableCollectionElements, enableCollectionElements} from './utils/disab
 const adForm = document.querySelector('.ad-form');
 const mapFilters = document.querySelector('.map__filters');
 
-const makePageInactive = () => {
+const blockPage = () => {
   adForm.classList.add('ad-form--disabled');
   disableCollectionElements(adForm.querySelectorAll('fieldset'));
   mapFilters.classList.add('map__filters--disabled');
@@ -11,7 +11,7 @@ const makePageInactive = () => {
   disableCollectionElements(mapFilters.querySelectorAll('fieldset'));
 };
 
-const makePegaActive = () => {
+const makePageActive = () => {
   adForm.classList.remove('ad-form--disabled');
   enableCollectionElements(adForm.querySelectorAll('fieldset'));
   mapFilters.classList.remove('map__filters--disabled');
@@ -19,4 +19,4 @@ const makePegaActive = () => {
   enableCollectionElements(mapFilters.querySelectorAll('fieldset'));
 };
 
-export {makePageInactive, makePegaActive};
+export {blockPage, makePageActive};
