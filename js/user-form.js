@@ -10,17 +10,17 @@ const capacitySelect =document.querySelector('#capacity');
 const capacityOption = capacitySelect.querySelectorAll('option');
 const roomNumberSelect = document.querySelector('#room_number');
 
-const typeSelect =document.querySelector('#type');
+const typeSelect = document.querySelector('#type');
 const housingPrice = document.querySelector('#price');
 
-const timeinSelect =document.querySelector('#timein');
+const timeinSelect = document.querySelector('#timein');
 const timeoutSelect = document.querySelector('#timeout');
 
 const getDisabled = (startIndex, lengthOption, logicalType) => {
   if (!capacityOption[0].hasAttribute('disabled')) {
     capacityOption[0].setAttribute('disabled','');
   }
-  capacityOption[2].selected=true;
+  capacityOption[2].selected = true;
   for( let i = startIndex; i <= lengthOption; i++ ){
     capacityOption[i].disabled = logicalType;
   }

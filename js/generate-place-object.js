@@ -34,6 +34,6 @@ const generatePlaceObject = () => {
   };
 };
 
-const ArrayOfGeneratedObjects = Array.from({length: 10}, generatePlaceObject);
+const arrayOfGeneratedObjects = Array.from({length: 10}, generatePlaceObject);
 
-export {generatePlaceObject, ArrayOfGeneratedObjects};
+export {generatePlaceObject, arrayOfGeneratedObjects};
