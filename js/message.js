@@ -11,7 +11,7 @@ export const showAlert = (message) => {
       evt.preventDefault();
     }
   };
-  document.addEventListener('keydown',() => {
+  document.addEventListener('keydown', () => {
     setPopupEscKeydown;
     alertContainer.style.display = 'none';
   });

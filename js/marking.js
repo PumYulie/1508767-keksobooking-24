@@ -62,8 +62,8 @@ export const createCard = (offerObject) => {
   userCard.querySelector('.popup__text--address').textContent = offerObject.offer.address;
   userCard.querySelector('.popup__text--price').textContent = `${offerObject.offer.price  } р/ночь`;
   userCard.querySelector('.popup__type').textContent = translatePopupType(offerObject.offer.type);
-  userCard.querySelector('.popup__text--capacity').textContent = `${offerObject.offer.rooms  } комнаты для ${  offerObject.offer.guests  } гостей`;
-  userCard.querySelector('.popup__text--time').textContent = `Заезд после ${offerObject.offer.checkin}, выезд до ${  offerObject.offer.checkout}`;
+  userCard.querySelector('.popup__text--capacity').textContent = `${offerObject.offer.rooms} комнаты для ${offerObject.offer.guests} гостей`;
+  userCard.querySelector('.popup__text--time').textContent = `Заезд после ${offerObject.offer.checkin}, выезд до ${offerObject.offer.checkout}`;
   userCard.querySelector('.popup__features').src = makePopupFeatures(userCard, offerObject.offer.features);
   userCard.querySelector('.popup__description').textContent = offerObject.offer.description;
   userCard.querySelector('.popup__photos').src = getPhoto(userCard, offerObject.offer.photos);

@@ -9,7 +9,7 @@ const RERENDER_DELAY = 500;
 const START_X = 35.68950;
 const START_Y = 139.69200;
 
-export const startCoordinate =  {
+export const startCoordinate = {
   lat: START_X,
   lng: START_Y,
 };

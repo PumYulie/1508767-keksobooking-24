@@ -149,7 +149,7 @@ mapFiltersParking.addEventListener('change', () => {
   markerGroup.clearLayers();
   if (chosenFilters.parking) {
     setChosenFilter('parking', null);
-  } else  {
+  } else {
     setChosenFilter('parking', true);
   }
   const filteredCards = getFilteredCards();
