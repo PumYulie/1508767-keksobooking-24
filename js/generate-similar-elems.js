@@ -44,6 +44,7 @@ const insertExistingPlaceFeatures = (arrayOfStrings) => {
   return boxOfLi;
 };
 
+//прохожусь по массиву сгенерир.объектов, а возвращаю массив уникальных РАЗМЕТОК
 const popupArticlesGenerated = ArrayOfGeneratedObjects.map( (popupArticle) => {
   const clonedPopupArticle = templatePopupArticle.cloneNode(true);
 
@@ -53,6 +54,7 @@ const popupArticlesGenerated = ArrayOfGeneratedObjects.map( (popupArticle) => {
   clonedPopupArticle.querySelector('.popup__type').textContent = namePlaceType(popupArticle.offer.type);
   clonedPopupArticle.querySelector('.popup__text--capacity').innerHTML = `${popupArticle.offer.rooms} комнат(ы) для ${popupArticle.offer.guests} гостей`;
 
+  //сбрасывать innerHTML и затем вставлять через .insertAdjacentHTML или можно оставить просто присвоением в innerHTML? (говорили, что небезопасно им бывает пользоваться)
   clonedPopupArticle.querySelector('.popup__text--time').innerHTML = '';
   clonedPopupArticle.querySelector('.popup__text--time').insertAdjacentHTML('afterbegin' ,`Заезд после ${popupArticle.offer.checkin}, выезд до ${popupArticle.offer.checkout}`);
   clonedPopupArticle.querySelector('.popup__features').innerHTML = '';
