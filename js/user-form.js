@@ -6,7 +6,7 @@ const cardForm = document.querySelector('.ad-form ');
 const success = document.querySelector('#success').content;
 const error = document.querySelector('#error').content;
 
-const capacitySelect =document.querySelector('#capacity');
+const capacitySelect = document.querySelector('#capacity');
 const capacityOption = capacitySelect.querySelectorAll('option');
 const roomNumberSelect = document.querySelector('#room_number');
 
